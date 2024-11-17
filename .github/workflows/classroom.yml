@@ -42,7 +42,7 @@ jobs:
           docker push registry.huds.su/bonuses:latest
           docker push registry.huds.su/gateway:latest
 
-  build:
+  deploy:
     name: Deploy to k8s
     runs-on: ubuntu-latest
     steps:
