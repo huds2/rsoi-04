@@ -46,6 +46,7 @@ jobs:
 
   deploy:
     name: Deploy to k8s
+    needs: [ build ]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -70,6 +71,7 @@ jobs:
 
   test:
     name: Autograding
+    needs: [ deploy ]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
