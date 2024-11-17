@@ -2,6 +2,8 @@ name: GitHub Classroom Workflow
 on:
   push:
     branches: [ master ]
+  pull_request:
+    types: [opened, reopened]
 jobs:
   build:
     name: Build images
